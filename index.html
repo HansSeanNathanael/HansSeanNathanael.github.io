@@ -1,0 +1,363 @@
+<html>
+
+<head>
+  <title>Hans Sean Natahanel Personal Portofolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "selector",
+    }
+  </script>
+</head>
+
+<body id="body" class="bg-violet-50 text-neutral-800 dark:bg-neutral-800 dark:text-white">
+  <header
+    class="flex flex-row justify-center sticky top-0 z-10 border-b-2 bg-violet-50 dark:bg-neutral-800 border-neutral-900 dark:border-violet-50">
+    <nav class="flex flex-wrap items-center justify-between max-w-[85rem] w-full py-2 px-8">
+      <a class="flex-none font-bold text-2xl md:text-3xl text-center text-gray-900 focus:outline-none dark:text-white"
+        href="#" aria-label="Brand">Hans Sean</a>
+      <button data-collapse-toggle="navbar-menu" type="button"
+        class="flex items-center px-4 gap-x-2 h-10 justify-center font-medium md:hidden focus:outline-none bg-violet-50 text-neutral-900 rounded-lg dark:text-violet-50 dark:bg-neutral-900"
+        aria-controls="navbar-default" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down"
+          viewBox="0 0 16 16">
+          <path
+            d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659" />
+        </svg>
+        Menu
+      </button>
+
+      <div class="flex flex-row md:hidden">
+        <button id="settingDropdownButton" data-dropdown-toggle="settings-menu-md"
+          class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium focus:outline-none disabled:opacity-50 disabled:pointer-events-none bg-transparent"
+          type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="" fill="currentColor"
+            view-box="0 0 16 16">
+            <path
+              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+          </svg>
+        </button>
+        <div id="settings-menu-md"
+          class="z-10 hidden divide-y divide-gray-100 duration min-w-60 bg-white shadow-md rounded-lg p-1 space-y-0.5 mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700">
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <button id="light-mode-button-md"
+                class="w-full flex text-left items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-neutral-900 hover:bg-gray-300 focus:outline-none dark:text-violet-50 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                </svg>
+                Light Mode
+              </button>
+            </li>
+            <li>
+              <button id="dark-mode-button-md"
+                class="w-full flex text-left items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-neutral-900 hover:bg-gray-300 focus:outline-none dark:text-violet-50 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-moon-stars" viewBox="0 0 16 16">
+                  <path
+                    d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                  <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                </svg>
+                Dark Mode
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+          <li>
+            <a href="#about-me"
+              class="block py-2 px-3 text-neutral-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">About
+              Me</a>
+          </li>
+          <li>
+            <a href="#contacts"
+              class="block py-2 px-3 text-neutral-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Contacts</a>
+          </li>
+          <li>
+            <a href="#experience"
+              class="block py-2 px-3 text-neutral-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Experience</a>
+          </li>
+          <li>
+            <a href="#education"
+              class="block py-2 px-3 text-neutral-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Education</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hidden flex-row md:flex">
+        <button id="settingDropdownButton" data-dropdown-toggle="settings-menu"
+          class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium focus:outline-none disabled:opacity-50 disabled:pointer-events-none bg-transparent"
+          type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="" fill="currentColor"
+            view-box="0 0 16 16">
+            <path
+              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+          </svg>
+        </button>
+        <div id="settings-menu"
+          class="z-10 hidden divide-y divide-gray-100 duration min-w-60 bg-white shadow-md rounded-lg p-1 space-y-0.5 mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700">
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <button id="light-mode-button"
+                class="w-full flex text-left items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-neutral-900 hover:bg-gray-300 focus:outline-none dark:text-violet-50 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                </svg>
+                Light Mode
+              </button>
+            </li>
+            <li>
+              <button id="dark-mode-button"
+                class="w-full flex text-left items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-neutral-900 hover:bg-gray-300 focus:outline-none dark:text-violet-50 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-moon-stars" viewBox="0 0 16 16">
+                  <path
+                    d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                  <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                </svg>
+                Dark Mode
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="flex flex-col items-center py-12 md:py-24 px-4 md:px-12">
+    <div class="flex flex-col max-w-[60rem] gap-y-12 md:gap-y-32">
+      <section id="about-me" class="w-full flex flex-col md:flex-row max-w-[60rem] gap-x-3.5 gap-y-6">
+        <div class="w-full md:w-1/2 flex flex-col gap-y-3.5">
+          <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center md:w-full w-1/2">
+              <div class="relative max-w-[25rem]">
+                <div id="profile-background-color" class="absolute top-0 left-0 w-full h-full -z-10 rounded-full"
+                  style="background-color: #3dcfff;">
+                </div>
+                <img src="resource/photo.png" class="w-full h-full rounded-full">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="relative inline-block">
+              <input id="profile-color-input" type="color"
+                class="opacity-0 top-0 left-0 absolute w-full h-full block cursor-pointer rounded-lg bg-transparent"
+                value="#3dcfff" title="Choose Background Color">
+              <div for="colorPicker"
+                class="flex flex-row items-center gap-x-2.5 text-sm md:text-base font-medium dark:text-white">
+                Change Background Color
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+          <p class="text-center md:text-left font-mono text-sm md:text-base lg:text-lg font-bold"><span
+              class="text-blue-700 dark:text-yellow-300">Hello there,</span> my name is</p>
+          <p class="text-center md:text-left font-mono text-xl md:text-3xl lg:text-4xl font-bold">Hans Sean Nathanael
+          </p>
+          <p class="mt-6 text-justify font-mono text-sm md:text-base">I have a Bachelor's Degree in Computer Science
+            from Institut Teknologi Sepuluh Nopember and graduate with a cum laude status. Programming is my passion, I
+            love writing code. During my college, I learn to write web app with framework, android app, and even machine
+            learning model. Not just that, I also learn design pattern, Domain Driven Design, CQRS, and many more.
+            During my leisure time, I practice solving problems on LeetCode</p>
+        </div>
+      </section>
+      <section id="contacts" class="w-full flex flex-col max-w-[60rem] gap-x-3.5 gap-y-6">
+        <p class="text-center font-mono text-xl md:text-2xl lg:text-3xl font-bold">Contacts</p>
+        <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
+          <a class="flex flex-col gap-3 px-3 rounded-lg shadow-md bg-white dark:bg-neutral-900"
+            href="mailto: hans.sean22@gmail.com">
+            <div class="flex flex-row justify-start gap-x-3.5">
+              <div class="flex flex-col justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-left font-mono text-sm md:text-base lg:text-lg font-bold">Email</p>
+                <p class="font-mono text-xs md:text-sm font-bold break-all">hans.sean22@gmail.com</p>
+              </div>
+            </div>
+          </a>
+          <a class="flex flex-col gap-3 px-3 rounded-lg shadow-md bg-white dark:bg-neutral-900"
+            href="tel: +62-877-5165-3353">
+            <div class="flex flex-row justify-start gap-x-3.5">
+              <div class="flex flex-col justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                  class="bi bi-telephone" viewBox="0 0 16 16">
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-left font-mono text-sm md:text-base lg:text-lg font-bold">Phone Number</p>
+                <p class="font-mono text-xs md:text-sm font-bold break-words" href="tel: +62-877-5165-3353">+62
+                  877-5165-3353</p>
+              </div>
+            </div>
+          </a>
+          <a class="flex flex-col gap-3 px-3 rounded-lg shadow-md bg-white dark:bg-neutral-900"
+            href="https://id.linkedin.com/in/hans-sean-nathanael-63b663220" target="_blank">
+            <div class="flex flex-row justify-start gap-x-3.5">
+              <div class="flex flex-col justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-linkedin" viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-left font-mono text-sm md:text-base lg:text-lg font-bold">Linkedin</p>
+                <p class="font-mono text-xs md:text-sm font-bold">Click to open</p>
+              </div>
+            </div>
+          </a>
+          <a class="flex flex-col gap-3 px-3 rounded-lg shadow-md bg-white dark:bg-neutral-900"
+            href="https://github.com/HansSeanNathanael" target="_blank">
+            <div class="flex flex-row justify-start gap-x-3.5">
+              <div class="flex flex-col justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-left font-mono text-sm md:text-base lg:text-lg font-bold">Github</p>
+                <p class="font-mono text-xs md:text-sm font-bold">Click to open</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section id="experience" class="w-full flex flex-col max-w-[60rem] gap-x-3.5 gap-y-6">
+        <p class="text-center font-mono text-xl md:text-2xl lg:text-3xl font-bold">Experience</p>
+        <div class="flex flex-col w-full items-center">
+          <div class="flex flex-col w-full max-w-[40rem]">
+            <div class="flex flex-row flex-1 gap-x-3.5">
+              <div class="flex flex-col pt-1 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4 md:size-5 lg:size-6"
+                  viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                </svg>
+                <div class=" w-0.5 flex-1 bg-neutral-900 dark:bg-violet-50"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-3" viewBox="3 3 10 10">
+                  <path fill-rule="evenodd" d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10" />
+                </svg>
+              </div>
+              <div class="w-full">
+                <p class="text-left font-mono text-base md:text-xl lg:text-2xl font-bold"><span
+                    class="text-blue-700 dark:text-yellow-300">Software</span> Developer</p>
+                <div class="flex flex-row justify-between gap-x-3.5">
+                  <p class="font-mono text-sm md:text-base lg:text-lg">at Dinas Komunikasi dan Informatika Kota Surabaya
+                  </p>
+                  <p class="font-mono text-sm md:text-base lg:text-lg dark:text-blue-300 sm:whitespace-nowrap">Aug
+                    2023-Dec 2023</p>
+                </div>
+                <ul class="mt-4 list-inside	 list-disc">
+                  <li class="text-sm md:text-base">
+                    Developed an API Gateway application using Laravel to facilitate seamless connections between
+                    various department applications.
+                  </li>
+                  <li class="text-sm md:text-base">
+                    Built a secure gateway for a direct database connections, enhancing data accessibility and
+                    integration.
+                  </li>
+                  <li class="text-sm md:text-base">
+                    Implemented RESTful APIs to ensure interactivity and secure data exchange.
+                  </li>
+                  <li class="text-sm md:text-base">
+                    Designed and developed monitoring system to track application performance and uptime.
+                  </li>
+                  <li class="text-sm md:text-base">
+                    Designed and developed an admin system with role-based access control to manage user permissions.
+                  </li>
+                  <li class="text-sm md:text-base">
+                    Built an integrated chat system and notification to enhance communication.
+                  </li>
+                </ul>
+                <div class="flex flex-row justify-center gap-x-4 mt-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-8 md:size-10 lg:w-12"
+                    viewBox="0 0 50 50">
+                    <path xmlns="http://www.w3.org/2000/svg" d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z" fill="#FF2D20" fill-rule="evenodd"/>
+                  </svg>
+                  <img src="resource/javascript.svg" class="size-8 md:size-10 lg:size-12">
+                  <img src="resource/postgresql.svg" class="size-8 md:size-10 lg:size-12">
+                  <img src="resource/surabaya_logo.svg" class="h-8 md:h-10 lg:h-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="education" class="w-full flex flex-col max-w-[60rem] gap-x-3.5 gap-y-6">
+        <p class="text-center font-mono text-xl md:text-2xl lg:text-3xl font-bold">Education</p>
+        <div class="flex flex-col w-full items-center">
+          <div class="flex flex-col w-full max-w-[40rem]">
+            <div class="flex flex-row flex-1 gap-x-3.5">
+              <div class="flex flex-col pt-1 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4 md:size-5 lg:size-6"
+                  viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                </svg>
+                <div class=" w-0.5 flex-1 bg-neutral-900 dark:bg-violet-50"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-3" viewBox="3 3 10 10">
+                  <path fill-rule="evenodd" d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10" />
+                </svg>
+              </div>
+              <div class="w-full">
+                <p class="text-left font-mono text-base md:text-xl lg:text-2xl font-bold"><span
+                    class="text-blue-700 dark:text-yellow-300">Institut</span> Teknologi Sepuluh Nopember (ITS)</p>
+                <div class="flex flex-row justify-between gap-x-3.5">
+                  <p class="font-mono text-sm md:text-base lg:text-lg">Computer Science Undergraduate</p>
+                  <p class="font-mono text-sm md:text-base lg:text-lg dark:text-blue-300 sm:whitespace-nowrap">2020-2024
+                  </p>
+                </div>
+                <ul class="mt-4 list-inside	 list-disc">
+                  <li class="text-sm md:text-base">
+                    GPA 3.84 out of 4.00
+                  </li>
+                  <li class="text-sm md:text-base">
+                    Graduate with a cum laude status
+                  </li>
+                  <li class="text-sm md:text-base">
+                    English test score 567 out of 677
+                  </li>
+                  <li class="text-sm md:text-base">
+                    Bachelor thesis: Performance Comparison of Convex Hull Trick and Knuth-Yao Quadrangle Inequality Algorithm on Solution of Case Study Problem SPOJ 40468 Mines of Moria II
+                  </li>
+                </ul>
+                <div class="flex flex-row justify-center gap-x-4 mt-2">
+                  <img src="resource/its_seal.svg" class="size-8 md:size-10 lg:size-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="./js/theme.selector.js"></script>
+  <script src="./js/profile.colorpicker.js"></script>
+</body>
+
+</html>
